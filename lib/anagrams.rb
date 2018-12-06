@@ -2,8 +2,9 @@ require 'net/http'
 require 'uri'
 
 class Anagrams
-  def initialize
+  def initialize(printer = Printer.new)
     @wordlist = Net::HTTP.get(URI.parse('http://codekata.com/data/wordlist.txt')).split("\n")
+    @printer = printer
   end
 
   def anagrams(word)
@@ -14,23 +15,11 @@ class Anagrams
       words << search unless search.nil?
     end
     words.delete(word)
-    printer(words, word)
+    @printer.print(words, word)
   end
 
 private
   def permutations(word)
     word.split('').permutation.to_a.map!(&:join)
-  end
-
-  def printer(array, word)
-    if array.empty?
-      puts "No anagrams found for #{word}"
-    elsif array.length == 1
-      puts "Anagram for #{word} is:"
-      puts array
-    else
-      puts "Anagrams for #{word} are:"
-      puts array
-    end
   end
 end
