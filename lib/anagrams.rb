@@ -17,7 +17,9 @@ class Anagrams
     puts "No anagrams found for #{word}" if @words.empty?
     puts @words
   end
-  
+
+  private
+
   def permutations(word)
     word.split('').permutation.to_a.map!(&:join)
   end
