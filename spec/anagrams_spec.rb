@@ -16,4 +16,11 @@ describe Anagrams do
       expect(subject.binary_search(array, word)).to eq('dog')
     end
   end
+
+  context '#anagrams' do
+    it 'outputs anagrams of word contained in wordlist' do
+      expect { subject.anagrams('paste') }.to output("pates\npeats\nspate"\
+        "\nsepta\ntapes\ntepas\n").to_stdout
+    end
+  end
 end

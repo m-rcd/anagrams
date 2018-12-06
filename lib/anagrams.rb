@@ -6,6 +6,15 @@ class Anagrams
     @wordlist = Net::HTTP.get(URI.parse('http://codekata.com/data/wordlist.txt')).split("\n")
   end
 
+  def anagrams(word)
+    words = permutations(word)
+    words.map! do |w|
+      binary_search(@wordlist, w)
+    end
+    words.delete(word)
+    puts words.compact
+  end
+
   def permutations(word)
     word.split('').permutation.to_a.map!(&:join)
   end
