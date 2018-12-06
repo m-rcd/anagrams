@@ -1,6 +1,7 @@
 # Anagrams
 
 [Motivation](#motivation) | [Build status](#build-status) | [Technologies](#technologies) | [Running the App](#running-the-app) | [Running tests](#running-tests)  | [Approach](#approach)  
+
 ----
 A simple interactive application which can solve anagrams.
 
