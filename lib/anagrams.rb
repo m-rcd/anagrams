@@ -1,4 +1,10 @@
+require 'net/http'
+require 'uri'
+
 class Anagrams
+  def initialize
+    @wordlist = Net::HTTP.get(URI.parse('http://codekata.com/data/wordlist.txt')).split("\n")
+  end
 
   def permutations(word)
     word.split('').permutation.to_a.map!(&:join)
@@ -16,6 +22,6 @@ class Anagrams
       else
         return word
       end
-    end  
+    end
   end
 end
