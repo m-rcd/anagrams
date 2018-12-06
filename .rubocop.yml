@@ -1,20 +1,3 @@
-Skip to content
-
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @m-rcd Sign out
-0
-0 0 m-rcd/bank-tech-test
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-bank-tech-test/.rubocop.yml
-0e70cbb  on 6 Nov
-@m-rcd m-rcd Extracted transactions into its own class
-
-454 lines (446 sloc)  8.5 KB
 Metrics/LineLength:
   Max: 100
 
@@ -468,16 +451,3 @@ WordArray:
   Enabled: false
 ZeroLengthPredicate:
   Enabled: false
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
