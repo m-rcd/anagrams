@@ -14,9 +14,10 @@ class Anagrams
       @words << search unless search.nil?
     end
     @words.delete(word)
+    puts "No anagrams found for #{word}" if @words.empty?
     puts @words
   end
-
+  
   def permutations(word)
     word.split('').permutation.to_a.map!(&:join)
   end

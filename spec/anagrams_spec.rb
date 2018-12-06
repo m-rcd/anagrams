@@ -14,5 +14,9 @@ describe Anagrams do
       expect { subject.anagrams('paste') }.to output("pates\npeats\nspate"\
         "\nsepta\ntapes\ntepas\n").to_stdout
     end
+
+    it "outputs 'no anagrams found' if no anagrams" do
+      expect { subject.anagrams('anagram') }.to output("No anagrams found for anagram\n").to_stdout
+    end
   end
 end
