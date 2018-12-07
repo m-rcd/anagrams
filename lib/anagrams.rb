@@ -14,12 +14,19 @@ class Anagrams
       search = @wordlist.bsearch { |value| w <=> value }
       words << search unless search.nil?
     end
-    words.delete(word.downcase)
+    w = word.downcase.delete '-'
+    words.delete(w)
     @printer.print(words, word)
   end
 
 private
+
   def permutations(word)
-    word.downcase.split('').permutation.to_a.map!(&:join)
+    w = hyphenated?(word) ? (word.delete '-') : word
+    w.downcase.split('').permutation.to_a.map!(&:join)
+  end
+
+  def hyphenated?(word)
+    word.include? '-'
   end
 end
