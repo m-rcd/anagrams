@@ -9,6 +9,11 @@ describe Anagrams do
         "\nsepta\ntapes\ntepas\n").to_stdout
     end
 
+    it 'outputs anagrams of word with capital letters' do
+      expect { subject.anagrams('Paste') }.to output("Anagrams for Paste are:\npates\npeats\nspate"\
+        "\nsepta\ntapes\ntepas\n").to_stdout
+    end
+
     it "outputs 'Anagram of word is' if only one anagram" do
       expect { subject.anagrams('cat') }.to output("Anagram for cat is:\nact\n").to_stdout
     end
