@@ -34,13 +34,13 @@ A tech test done as part of the interview for a junior developer role at Apolitc
 
   Replace `<word>` with any word you like(can add multiple words)
 
-![anagrams](anagrams.png)
+![anagrams](anagram.png)
 
 ##  <a name="running-tests">**Running tests**</a>
 
 Run `rspec` in your terminal
 
-![tests](tests.png)
+![tests](test.png)
 
 ##  <a name="approach">**Approach**</a>
 
