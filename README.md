@@ -7,7 +7,7 @@ A simple interactive application which can solve anagrams.
 
 ##  <a name="motivation">**Motivation**</a>
 
-A tech test done as part of the interview for a junior developer role at Apolitcal.
+A tech test done as part of the interview for a junior developer role.
 
 ##  <a name="build-status">**Build Status**</a>
 
